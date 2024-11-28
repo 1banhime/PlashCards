@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import messagebox
 import random
-from dictionary import kanji_data
+import json
 import pickle
 
 class KanjiApp(tk.Tk):
@@ -43,6 +43,12 @@ class KanjiApp(tk.Tk):
         except FileNotFoundError: 
             self.mastery_level = 0
             self.seen_words = []
+        
+        try:
+            with open("dictionary.json", "r") as file:
+                self.kanji_data = json.load(file)     
+        except FileNotFoundError:
+            quit()
             
     def save_data(self):
         '''Writes the mastery_level and seen_words variables to the kanji_data.pickle file'''
@@ -60,7 +66,7 @@ class KanjiApp(tk.Tk):
         if len(self.seen_words) > self.mastery():
             return random.choice(self.seen_words)
         else:
-            return random.choice(list(kanji_data.keys()))
+            return random.choice(list(self.kanji_data.keys()))
         
     def display_card(self):
         '''displays the current_kanji as the kanji_label and adds the current_kanji to the
@@ -75,10 +81,10 @@ class KanjiApp(tk.Tk):
         mastery function to increase the mastery_level with a random postive or negative 
         integer depending on if the answer is correct.'''
         user_answer = self.answer_entry.get().strip().lower()
-        correct_answer = kanji_data[self.current_kanji]["Meaning"].lower()
+        correct_answer = self.kanji_data[self.current_kanji]["Meaning"].lower()
 
         if user_answer == correct_answer:
-            messagebox.showinfo("Correct", f"The kun reading is: {kanji_data[self.current_kanji]['Kun Reading']} \n\n the on reading is: {kanji_data[self.current_kanji]['On Reading']}")
+            messagebox.showinfo("Correct", f"The kun reading is: {self.kanji_data[self.current_kanji]['Kun Reading']} \n\n the on reading is: {self.kanji_data[self.current_kanji]['On Reading']}")
             self.mastery(random.randint(1,3)) #TODO: Test rand float 
         else:
             messagebox.showerror("Incorrect", f"Wrong answer! The correct answer is: {correct_answer}")

@@ -1,4 +1,4 @@
-kanji_data = {
+{
     "一": {"Meaning": "one", "Kun Reading": "ひと(つ)", "On Reading": "イチ"},
     "二": {"Meaning": "two", "Kun Reading": "ふた(つ)", "On Reading": "ニ"},
     "三": {"Meaning": "three", "Kun Reading": "み(つ)", "On Reading": "サン"},
@@ -26,7 +26,6 @@ kanji_data = {
     "木": {"Meaning": "tree", "Kun Reading": "き", "On Reading": "ボク/モク"},
     "林": {"Meaning": "woods", "Kun Reading": "はやし", "On Reading": "リン"},
     "山": {"Meaning": "mountain", "Kun Reading": "やま", "On Reading": "サン"},
-    "川": {"Meaning": "river", "Kun Reading": "かわ", "On Reading": "セン"},
     "土": {"Meaning": "soil", "Kun Reading": "つち", "On Reading": "ド/ト"},
     "田": {"Meaning": "rice field", "Kun Reading": "た", "On Reading": "デン"},
     "天": {"Meaning": "heaven/sky", "Kun Reading": "てん", "On Reading": "テン"},
@@ -35,7 +34,6 @@ kanji_data = {
     "火": {"Meaning": "fire", "Kun Reading": "ひ", "On Reading": "カ"},
     "水": {"Meaning": "water", "Kun Reading": "みず", "On Reading": "スイ"},
     "金": {"Meaning": "gold/metal", "Kun Reading": "かね", "On Reading": "キン/コン"},
-    "土": {"Meaning": "soil/earth", "Kun Reading": "つち", "On Reading": "ド/ト"},
     "石": {"Meaning": "stone", "Kun Reading": "いし", "On Reading": "セキ"},
     "川": {"Meaning": "river", "Kun Reading": "かわ", "On Reading": "セン"},
     "空": {"Meaning": "sky/empty", "Kun Reading": "そら/から", "On Reading": "クウ"},
@@ -51,12 +49,7 @@ kanji_data = {
     "南": {"Meaning": "south", "Kun Reading": "みなみ", "On Reading": "ナン"},
     "西": {"Meaning": "west", "Kun Reading": "にし", "On Reading": "セイ"},
     "東": {"Meaning": "east", "Kun Reading": "ひがし", "On Reading": "トウ"},
-    "目": {"Meaning": "eye", "Kun Reading": "め", "On Reading": "モク"},
-    "耳": {"Meaning": "ear", "Kun Reading": "みみ", "On Reading": "ジ"},
-    "手": {"Meaning": "hand", "Kun Reading": "て", "On Reading": "シュ"},
-    "足": {"Meaning": "foot/leg", "Kun Reading": "あし", "On Reading": "ソク"},
     "休": {"Meaning": "rest", "Kun Reading": "やす(む)", "On Reading": "キュウ"},
-    "先": {"Meaning": "in front", "Kun Reading": "さき", "On Reading": "セン"},
     "学": {"Meaning": "study/learn", "Kun Reading": "まな(ぶ)", "On Reading": "ガク"},
     "校": {"Meaning": "school", "Kun Reading": "こう", "On Reading": "コウ"},
     "生": {"Meaning": "life/live", "Kun Reading": "い(きる)", "On Reading": "セイ"},
@@ -82,5 +75,5 @@ kanji_data = {
     "雨": {"Meaning": "rain", "Kun Reading": "あめ", "On Reading": "ウ"},
     "雪": {"Meaning": "snow", "Kun Reading": "ゆき", "On Reading": "セツ"},
     "時": {"Meaning": "time/hour", "Kun Reading": "とき", "On Reading": "ジ"},
-    "文": {"Meaning": "sentence/literature", "Kun Reading": "ふみ", "On Reading": "ブン/モン"},
+    "文": {"Meaning": "sentence/literature", "Kun Reading": "ふみ", "On Reading": "ブン/モン"}
 }

@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import messagebox
 import random
-from dictionary import *
+import json
 import pickle
 
 def save():
@@ -9,14 +9,27 @@ def save():
         pickle.dump((mastery_level, seen_words), file)
 
 def load():
-    global mastery_level, seen_words
+    global mastery_level, seen_words, kanji_data, schedule
     try:
         with open("kanji_data.pickle", "rb") as file:
             mastery_level, seen_words = pickle.load(file)
     except FileNotFoundError: 
         mastery_level = 0
-        seen_words = [random.choice(list(kanji_data.keys()))]
+        seen_words = []
 
+    try:
+        with open("dictionary.json", "r", encoding="utf-8") as file:
+            kanji_data = json.load(file)     
+    except FileNotFoundError:
+        print("no fiwe fwound :3")
+        quit()
+        
+    try: 
+        with open("schedule.json", "r", encoding="utf-8") as file:
+            schedule = json.load(file)
+    except FileNotFoundError:
+        print("no fiwe fwound :3")
+        quit()
 load()
 
 
